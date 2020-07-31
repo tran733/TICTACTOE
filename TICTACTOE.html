@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        /*Element selectors*/
+        body{
+            overflow: auto;
+        }
+
+        h3 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+      
+        tr {
+            border-collapse: collapse;
+            border:none;
+        }
+ 
+        td {
+            width: 60px;
+            height: 30px;
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 10px 6px 10px 6px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+        /*End of Element selectors*/
+        /*Class selectors*/
+
+        .panelTd {
+            padding: 0px;
+            width: auto;
+            height: 20px;
+            border: none;
+            border-collapse: collapse;
+            color: black;
+            text-align: center;
+        }
+        .blue{
+            background-color:blue;
+        }
+        .red {
+            background-color: red;
+        }
+
+        .win {
+           background-color: aqua;
+           animation: winner;
+           animation-iteration-count: infinite;
+           animation-timing-function: ease-in;
+           animation-duration: 2s;
+           animation-direction: alternate-reverse;
+        }
+        @keyframes winner {
+            from {
+                background-image: linear-gradient(to right,aqua, teal);
+                text-shadow: 3px 3px 0px teal;
+            }
+            to {
+                background-image: linear-gradient(to right,lightblue, blue);
+                text-shadow: 3px 3px 10px teal;
+            }
+        }
+        /*end of class selectors*/
+        /*ID selectors*/
+
+        #panel {
+            text-align: "center";
+            border: none;
+            border-collapse: collapse;
+            margin-bottom: 5px;
+        }
+      
+
+        #blueScore {
+             font-size: 40px;
+             font-family: Arial, Helvetica, sans-serif;
+             color: blue;
+        }
+        #demo {
+            text-align: "center";
+            border: 3px solid black;
+            border-collapse: collapse;
+            width: 180px;
+            height: 150px;
+        }
+
+        #redScore {
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: red;
+        }
+        #resetBTN {
+            background-color: forestgreen;
+            border: 2px solid forestgreen;
+            color: white;
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        #resetScore {
+            background-color: aquamarine;
+            border: 2px solid aquamarine;
+            color: white;
+            padding: 5px;
+            font-size: 18px;
+            margin: 3px;
+        }
+        #color{
+            margin: 7px;
+            width: 18%;
+            height: 5%
+        }
+        #setColor{
+            color: #111;
+            background-color: white;
+            border: white;
+            margin: 5px;
+            padding: 5px;
+            font-size: 20px;
+
+        }
+        #color2 {
+            margin: 7px;
+            width: 18%;
+            height: 5%
+        }
+
+        #setColor2 {
+            color: #111;
+            background-color: white;
+            border: white;
+            margin: 5px;
+            padding: 5px;
+            font-size: 20px;
+        }
+        #color:hover{
+            width: 20%;
+            height: 7%;
+        }
+        #color2:hover {
+            width: 20%;
+            height: 7%;
+        }
+        #setColor:hover{
+            background-color: aquamarine;
+            color: white;
+        }
+        #setColor2:hover {
+            background-color: gold;
+            color: white;
+        }
+        #modify {
+            float: left;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            width: 0;
+            left: 0;
+            overflow-x: hidden;
+            background-color: #111;
+            height: 100%;
+        }
+        #pauseGame {
+            background-color: antiquewhite;
+            color: white;
+            border: 2px solid antiquewhite;
+            font-size: 20px;
+            padding: 5px;
+        }
+            #pauseGame:disabled {
+                background-color: lightgoldenrodyellow;
+                border: 2px solid lightgoldenrodyellow;
+            }
+        /*end of ID selectors*/
+
+    </style>
+    
+</head>
+<body>
+    <table id="panel" align="center" style="width:400px;height:100px; color:black;border: 0px solid white">
+        <tr>
+            <th class="panelTd" colspan="2"><h1 align="center" style="color:black">TIC TAC TOE</h1></th>
+
+        </tr>
+        <tr>
+            <th><h1 align="center"><span id="blueScore">0</span> : <span id="redScore">0</span></h1></th>
+        </tr>
+        <tr>
+
+            <td class="panelTd">
+                <input id="resetBTN" type="button" value="Play Again">
+                <input id="resetScore" type="button" value="Reset Score">
+                <input id="pauseGame" type="button" value="Pause" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="color: black" id="winner"><span id="playerTurn">O plays first </span>: <span id="timer">60</span> seconds left</td>
+        </tr>
+
+    </table>
+
+
+    <table align="center" id="demo"></table>
+    <br />
+    <div id="modify">
+        <input id="color" type="color">
+        <input id="setColor" type="button" value="Change O's color">
+        <input id="color2" type="color">
+        <input id="setColor2" type="button" value="Change X's color">
+    </div>
+
+    <table align="center" id="board"></table>
+    <script src="js/khangTTTcodeObjectOriented.js">
+    </script>
+</body>
+</html>
