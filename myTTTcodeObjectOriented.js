@@ -5,9 +5,11 @@ var currRow = 0, currCol = 0, currPlayer = 0, id = 0;
 const td = demo.getElementsByTagName("td");
 const tr = demo.getElementsByTagName("tr");
 var color1 = "blue", color2 = "red";
+sessionStorage.bluseScore = sessionStorage.blueScore ? 0 : sessionStorage.blueScore;
+sessionStorage.redScore = sessionStorage.redScore  ? 0 : sessionStorage.redScore;
 document.body.onload = () => {
-    document.getElementById("blueScore").innerHTML = sessionStorage.blueScore == undefined ? 0 : sessionStorage.blueScore;
-    document.getElementById("redScore").innerHTML = sessionStorage.redScore == undefined ? 0 : sessionStorage.redScore;
+    document.getElementById("blueScore").innerHTML = sessionStorage.bluseScore;
+    document.getElementById("redScore").innerHTML =  sessionStorage.redScore;
 }
 setColor.onclick = () => {
     color1 = document.getElementById("color").value;
