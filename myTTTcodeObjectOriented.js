@@ -5,7 +5,7 @@ var currRow = 0, currCol = 0, currPlayer = 0, id = 0;
 const td = demo.getElementsByTagName("td");
 const tr = demo.getElementsByTagName("tr");
 var color1 = "blue", color2 = "red";
-sessionStorage.bluseScore = sessionStorage.blueScore ? 0 : sessionStorage.blueScore;
+sessionStorage.blueScore = sessionStorage.blueScore ? 0 : sessionStorage.blueScore;
 sessionStorage.redScore = sessionStorage.redScore  ? 0 : sessionStorage.redScore;
 document.body.onload = () => {
     document.getElementById("blueScore").innerHTML = sessionStorage.bluseScore;
