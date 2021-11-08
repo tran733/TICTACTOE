@@ -8,7 +8,7 @@ var color1 = "blue", color2 = "red";
 sessionStorage.blueScore = sessionStorage.blueScore ? 0 : sessionStorage.blueScore;
 sessionStorage.redScore = sessionStorage.redScore  ? 0 : sessionStorage.redScore;
 document.body.onload = () => {
-    document.getElementById("blueScore").innerHTML = sessionStorage.bluseScore;
+    document.getElementById("blueScore").innerHTML = sessionStorage.blueScore;
     document.getElementById("redScore").innerHTML =  sessionStorage.redScore;
 }
 setColor.onclick = () => {
